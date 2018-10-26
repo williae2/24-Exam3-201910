@@ -2,8 +2,8 @@
 Exam 3, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October, 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Elijah Williams.  October, 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -77,12 +77,33 @@ And this one for n=14:
     :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In your final solution for this problem,
     #   you must NOT use string multiplication.
     ####################################################################
+    for k in range(n):
+        for j in range(n-k):
+            print(' ', end='')
+        for i in range(k+1):
+            if i+1 >= 10:
+                t = (i+1)-10
+            else:
+                t = i+1
+            print(t, end='')
+        print(' ', end='')
+        for p in range(k + 1):
+                print("*", end='')
+        print(' ', end='')
+        for l in range(n-k):
+            if n-(l+k) >= 10:
+                c = (n-(l+k)) - 10
+            else:
+                c = n-(l+k)
+            print(c, end='')
+        print()
+
 
 
 # ----------------------------------------------------------------------
